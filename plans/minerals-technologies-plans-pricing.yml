@@ -4,44 +4,26 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Minerals Technologies
 providerId: minerals-technologies
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+method: searched
+modified: '2026-09-17'
 reconciled: false
 tags:
-  - Industrial
-  - Specialty Minerals
-  - Manufacturing
-  - B2B
-description: Minerals Technologies, Inc. (NYSE MTX) is an industrial specialty-minerals manufacturer.
-  It does not publish a developer portal, public API, or per-call pricing — commercial relationships
-  are negotiated direct or through distributors. No machine-readable plan data is available; this file
-  is retained as a structural placeholder only.
+- Industrial
+- Specialty Minerals
+- Manufacturing
+- B2B
+description: 'Minerals Technologies, Inc. (NYSE: MTX) is an industrial specialty-minerals manufacturer. A search
+  of its site (1,954-URL sitemap, 2026-09-17) found no developer portal, public API, per-call pricing or plan tiers;
+  commercial relationships are negotiated direct or through distributors. plan_count is 0 because the provider publishes
+  no plans, not because the search was skipped.'
 sources:
-  - https://www.mineralstech.com/
-notes: No public API or developer pricing. Engagement is via direct sales or distributor channels;
-  pricing is negotiated per contract.
-plans:
-  - id: minerals-technologies-direct-sales
-    name: Direct Sales / Custom Contract
-    type: enterprise
-    description: All commercial engagement runs through Minerals Technologies direct sales or
-      authorized distributors; pricing is per-contract and not publicly listed.
-    entries:
-      - label: Custom contract
-        name: contract
-        type: subscription
-        metric: contract
-        limit: -1
-        timeFrame: year
-        geo: global
-        unit: 1
-        price: contact sales
-        userMultiplied: false
-    elements:
-      - name: Direct sales engagement
-      - name: Specialty minerals product lines
-      - name: Refractories product lines
-      - name: Performance materials product lines
+- https://www.mineralstech.com/
+- https://www.mineralstech.com/sitemap.xml
+notes: No public API and no published plans. Engagement is via direct sales or distributor channels; pricing is
+  negotiated per contract.
+plans: []
 maintainers: []
+generated: '2026-09-17'
+source: https://www.mineralstech.com/sitemap.xml
+plan_count: 0
+elements: []

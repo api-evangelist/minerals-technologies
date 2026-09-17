@@ -4,28 +4,23 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Minerals Technologies
 providerId: minerals-technologies
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+method: searched
+modified: '2026-09-17'
 reconciled: false
 tags:
-  - Rate Limiting
-  - Industrial
-description: Minerals Technologies does not publish a developer portal or public API; there are no
-  rate-limit numbers to capture. This artifact is retained as a structural placeholder so consumers
-  can iterate the schema.
+- Rate Limiting
+- Industrial
+description: Minerals Technologies publishes no developer portal or public API (site search 2026-09-17, 1,954-URL
+  sitemap, api./developer. hosts NXDOMAIN), so there are no rate limits, windows or response headers to record.
+  limit_count is 0 because nothing is published, not because the search was skipped.
 sources:
-  - https://www.mineralstech.com/
+- https://www.mineralstech.com/
+- https://www.mineralstech.com/sitemap.xml
 notes: No public API. No published rate limits.
 responseCodes: {}
-limits:
-  - name: No public API
-    scope: account
-    metric: varies
-    limit: 'No public API; rate limits not applicable'
-policies:
-  - name: Direct engagement
-    description: Any technical or data integration is handled bilaterally through Minerals Technologies
-      direct sales / IT contacts.
+limits: []
+policies: []
 maintainers: []
+generated: '2026-09-17'
+source: https://www.mineralstech.com/sitemap.xml
+limit_count: 0

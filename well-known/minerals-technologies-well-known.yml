@@ -1,0 +1,78 @@
+generated: '2026-09-17'
+method: probed
+source: https://www.mineralstech.com
+note: >-
+  Every /.well-known/ path was probed on the registrable domain, www, and the api./developer. hosts the
+  prior record carried. Nothing served a real document: security.txt, ai-plugin.json, agent-card.json and
+  agent.json returned the site's own HTML 404; openid-configuration, oauth-authorization-server,
+  oauth-protected-resource and api-catalog answered HTTP 200 with a ~200-950 byte Imperva/Incapsula
+  bot-challenge frame ("Request unsuccessful. Incapsula incident ID"), which is not a document and is
+  recorded as a miss. api.mineralstech.com and developer.mineralstech.com do not resolve in DNS (status 0).
+  The apex mineralstech.com 301s every path to www. No WellKnown or SecurityTxt pointer is emitted.
+hosts:
+  - host: www.mineralstech.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: Imperva bot-challenge HTML frame, not a document — treated as absent
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: Imperva bot-challenge HTML frame, not a document — treated as absent
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: null
+        note: Imperva bot-challenge HTML frame, not a document — treated as absent
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: Imperva bot-challenge HTML frame, not a document — treated as absent
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: mineralstech.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+        file: null
+        note: redirects to www.mineralstech.com
+      - path: /.well-known/openid-configuration
+        status: 301
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+        file: null
+      - path: /.well-known/api-catalog
+        status: 301
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 301
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 301
+        file: null
+      - path: /.well-known/agent.json
+        status: 301
+        file: null
+  - host: api.mineralstech.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        note: host does not resolve (NXDOMAIN)
+  - host: developer.mineralstech.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        note: host does not resolve (NXDOMAIN)

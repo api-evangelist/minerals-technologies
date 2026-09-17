@@ -27,34 +27,78 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/minerals-technologies.png
 tags:
-  - Specialty Minerals
-  - Chemical
-description: >-
-  Minerals Technologies is a major US corporation and Fortune 1000 company. The Minerals Technologies API provides programmatic access to its platform services, data, and integrations for enterprise customers and partners.
+- Specialty Minerals
+- Chemicals
+- Industrial
+- Manufacturing
+- Materials
+- Mining
+- B2B
+tags_raw:
+- Specialty Minerals
+- Chemical
+- Industrial
+- Manufacturing
+- Materials
+- Mining
+- B2B
+description: 'Minerals Technologies Inc. (NYSE: MTX) is a New York-headquartered, Fortune 1000 resource- and technology-based
+  company that develops, produces and markets specialty minerals, mineral-based and synthetic mineral products and
+  related systems and services across two segments, Consumer & Specialties (household and personal care, specialty
+  additives) and Engineered Solutions (high-temperature technologies, environmental and infrastructure), through
+  brands including Specialty Minerals, Minteq, CETCO and AMCOL, with more than 110 locations worldwide. It sells
+  physical products through direct sales and distributors and publishes no developer portal, public API, SDK or
+  machine-readable contract.'
 created: '2026-04-19'
-modified: '2026-04-19'
+modified: '2026-09-17'
 specificationVersion: '0.23'
-apis:
-  - aid: minerals-technologies:minerals-technologies-api
-    name: Minerals Technologies API
-    tags:
-      - Specialty Minerals
-      - Chemical
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.mineralstech.com
-    humanURL: https://developer.mineralstech.com
-    properties:
-      - url: https://developer.mineralstech.com/docs
-        type: Documentation
-    description: >-
-      The Minerals Technologies API provides access to platform services and data for enterprise integration and automation.
+apis: []
 common:
-  - type: DomainSecurity
-    url: security/minerals-technologies-domain-security.yml
-  - type: LinkedIn
-    url: https://www.linkedin.com/company/minerals-technologies
-  - type: Website
-    url: https://www.mineralstech.com
+- type: Website
+  url: https://www.mineralstech.com
+- type: PrivacyPolicy
+  url: https://www.mineralstech.com/docs/default-source/default-document-library/privacy-notice.pdf
+- type: TermsOfService
+  url: https://www.mineralstech.com/docs/default-source/default-document-library/terms-of-use.pdf
+- type: Support
+  url: https://www.mineralstech.com/contact
+- type: Careers
+  url: https://www.mineralstech.com/careers
+- type: Newsroom
+  url: https://www.mineralstech.com/investors/news
+- type: LinkedIn
+  url: https://www.linkedin.com/company/minerals-technologies
+- type: DomainSecurity
+  url: security/minerals-technologies-domain-security.yml
 maintainers:
-  - FN: Kin Lane
-    email: kin@apievangelist.com
+- FN: Kin Lane
+  email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-17'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Minerals Technologies is an industrial specialty-minerals manufacturer whose 1,954-URL sitemap holds product,
+    CAD and investor pages but no developer, API or portal page; the api.mineralstech.com and developer.mineralstech.com
+    hosts the prior record carried do not resolve in DNS, and every contract, llms.txt, security.txt and agent-card
+    path on www.mineralstech.com returns the site's own 404 while the remaining /.well-known/* paths answer only
+    an Imperva bot-challenge frame.
+  evidence:
+  - url: https://api.mineralstech.com/
+    status: 0
+  - url: https://developer.mineralstech.com/docs
+    status: 0
+  - url: https://www.mineralstech.com/openapi.json
+    status: 404
+  - url: https://www.mineralstech.com/llms.txt
+    status: 404
+  - url: https://www.mineralstech.com/.well-known/security.txt
+    status: 404
+  - url: https://www.mineralstech.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.mineralstech.com/sitemap.xml
+    status: 200
+  checked: '2026-09-17'
